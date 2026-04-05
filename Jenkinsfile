@@ -22,10 +22,11 @@ pipeline {
                 python3 - <<EOF
 from calculator import add, subtract, multiply, divide
 
-print("Add:", add(2,3))
-print("Subtract:", subtract(5,2))
-print("Multiply:", multiply(2,4))
-print("Divide:", divide(10,2))
+assert add(2,3) == 5
+assert subtract(5,2) == 3
+assert multiply(2,4) == 8
+assert divide(10,2) == 5
+print("All test passed")
 EOF
                 '''
             }
